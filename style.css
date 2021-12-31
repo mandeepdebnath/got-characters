@@ -1,0 +1,65 @@
+:root {
+  --step--2: clamp(0.78rem, 0.52rem + 1.29vw, 1.44rem);
+  --step--1: clamp(0.94rem, 0.6rem + 1.68vw, 1.8rem);
+  --step-0: clamp(1.13rem, 0.69rem + 2.2vw, 2.25rem);
+  --step-1: clamp(1.35rem, 0.78rem + 2.85vw, 2.81rem);
+  --step-2: clamp(1.62rem, 0.88rem + 3.7vw, 3.52rem);
+  --step-3: clamp(1.94rem, 0.99rem + 4.78vw, 4.39rem);
+  --step-4: clamp(2.33rem, 1.1rem + 6.17vw, 5.49rem);
+  --step-5: clamp(2.8rem, 1.21rem + 7.94vw, 6.87rem);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: none !important;
+}
+
+span {
+  display: block;
+}
+
+body {
+  background: #2a2a2a !important;
+  color: #f1f1f1 !important;
+}
+
+.heading {
+  margin: 30px auto;
+  font-size: var(--step-2) !important;
+}
+input {
+  width: 100%;
+}
+
+.character {
+  background: #f1f1f1;
+  color: #2a2a2a;
+  border-radius: 4px;
+}
+
+.characterCard h3 {
+  font-weight: 700;
+}
+.characterCard h5 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.characterCard span {
+  font-weight: 300;
+}
+
+img {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  input {
+    width: 80%;
+  }
+}
