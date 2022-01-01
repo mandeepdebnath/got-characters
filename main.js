@@ -17,12 +17,14 @@ async function getCharacters() {
 getCharacters();
 //<--------!!-------->
 
+
+
 //Function to render and display all characters from API
 async function renderCharacters(characters) {
 
   let html = "";
 
-  characters.forEach((character) => {
+  characters.map((character) => {
     let htmlSegment = `<div class="character d-flex justify-content-between my-2 p-3 col-sm-5">
     <div class="info">
     <h3 id="name">${character.fullName}</h3>
@@ -43,7 +45,7 @@ async function renderCharacters(characters) {
 //<--------!!-------->
 
 //Function to render and display filtered character based on search input
-searchInput.addEventListener("keyup", async (e) => {
+searchInput.addEventListener("keyup", (e) => {
   
   searchString = e.target.value.toLowerCase();
 
@@ -54,8 +56,6 @@ searchInput.addEventListener("keyup", async (e) => {
     )
   });
   renderCharacters(filteredCharacters);
-  console.log(filteredCharacters);
-  console.log(gotCharacters)
 }
 )
 //<--------!!-------->
