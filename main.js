@@ -21,7 +21,7 @@ async function renderCharacters(characters) {
   let html = "";
 
   characters.map((character) => {
-    let htmlSegment = `<div class="character d-flex justify-content-between my-2 p-3 col-md-5">
+    let htmlSegment = `<div class="character d-flex justify-content-between my-1 p-3 col-md-5">
     <div class="info">
     <h3 id="name">${character.fullName}</h3>
     <h5>aka "${character.title}"</h5>
