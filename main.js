@@ -28,7 +28,7 @@ async function renderCharacters(characters) {
     <span>Family: ${character.family}</span>
     
     </div>
-    <img src="${character.imageUrl}" alt="image not found"/>
+    <img src="${character.imageUrl}" alt="image not found" loading="lazy"/>
   </div>`;
 
     html += htmlSegment;
