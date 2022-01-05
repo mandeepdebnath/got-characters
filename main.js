@@ -2,12 +2,11 @@ const url = "https://thronesapi.com/api/v2/Characters";
 const searchInput = document.querySelector(".searchInput");
 let gotCharacters = [];
 
-
 //Function to call API
 async function getCharacters() {
   try {
     let res = await fetch(url); //fetching the data from API
-    gotCharacters = await res.json();  //converting the promise into JSON data
+    gotCharacters = await res.json(); //converting the promise into JSON data
     renderCharacters(gotCharacters); //running the function to display characters with the fetched data
     console.log(gotCharacters);
   } catch (error) {
@@ -17,11 +16,8 @@ async function getCharacters() {
 getCharacters();
 //<--------!!-------->
 
-
-
 //Function to render and display all characters from API
 async function renderCharacters(characters) {
-
   let html = "";
 
   characters.map((character) => {
@@ -40,23 +36,19 @@ async function renderCharacters(characters) {
 
   let characterCard = document.querySelector(".characterCard");
   characterCard.innerHTML = html;
-
 }
 //<--------!!-------->
 
 //Function to render and display filtered character based on search input
 searchInput.addEventListener("keyup", (e) => {
-  
   searchString = e.target.value.toLowerCase();
 
   const filteredCharacters = gotCharacters.filter((character) => {
     return (
       character.fullName.toLowerCase().includes(searchString) ||
       character.title.toLowerCase().includes(searchString)
-    )
+    );
   });
   renderCharacters(filteredCharacters);
-}
-)
+});
 //<--------!!-------->
-
